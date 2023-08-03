@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="first">
+        <div class="emblem"></div>
+        <div class="flag"></div>
+    </div>
+    <hr>
+    
+    <table class="table table-striped">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Date Of Birth</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Gender</th>
+            <th>UID</th>
+            <th>Operations</th>
+        </tr>
+        <tr  *ngFor="let citizen of citizens">
+            <td>{{citizen.citizenId}}</td>
+            <td>{{citizen.name}}</td>
+            <td>{{citizen.dob}}</td>
+            <td>{{citizen.email}}</td>
+            <td>{{citizen.address}}</td>
+            <td>{{citizen.mobileno}}</td>
+            <td>{{citizen.gender}}</td>
+            <td>{{ citizen.uid }}</td>
+            <td><button class="btn btn-info btn-sm" (click)="generate(citizen.citizenId)">Generate UID </button></td>
+        </tr>
+    </table>
+</div>

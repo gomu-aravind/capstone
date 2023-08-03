@@ -1,0 +1,20 @@
+.outer{
+    margin-top: 30px;
+    background: linear-gradient(to right, rgb(255, 110, 127), rgb(191, 233, 255));
+    padding: 20px;
+    width:70%;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #252e3a;
+  }
+  .red-border {
+    border: 1px solid red;
+  }
+
+
+  .caution{
+    font-weight: 600;
+    color:rgb(186, 1, 1);
+  }

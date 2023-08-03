@@ -1,0 +1,11 @@
+.outer{
+    margin-top:70px;
+    background: linear-gradient(to right, rgb(93 249 255), rgb(0, 205, 172));
+    padding: 20px;
+    width:75%;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #252e3a;
+  }

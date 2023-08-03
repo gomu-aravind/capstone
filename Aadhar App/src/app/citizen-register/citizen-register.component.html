@@ -1,0 +1,148 @@
+<div class="container d-flex justify-content-center outer">
+    <form #f="ngForm" class="w-50 p-4" style="color: rgb(120, 55, 5)">
+        <h3 style="color: rgba(23, 8, 34, 0.84)" class="text-center">
+            Registration Page
+          </h3>
+      <div class="row mb-2">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            class="form-control"
+            name="name"
+            required
+            ngModel
+            #name="ngModel"
+          />
+        </div>
+        <span
+            id="err-name"
+            style="color: red"
+            class="small"
+            *ngIf="!name.valid && name.touched"
+            >Please enter the name</span>
+      </div>
+      <div class="row mb-2">
+        <div class="form-group">
+          <label for="dob">Date Of Birth</label>
+          <input
+            type="text"
+            id="dob"
+            class="form-control"
+            name="dob"
+            placeholder="yyyy-mm-dd"
+            ngModel
+            required
+            dob
+            #dob="ngModel"
+          />
+          <span
+            id="err-dob"
+            style="color: red"
+            class="small"
+            *ngIf="!dob.valid && dob.touched"
+            >Please enter a valid dob</span
+          >
+        </div>
+      </div>
+      <div class="row mb-2">
+        <div class="form-group">
+          <label for="emailid">Email</label>
+          <input
+            type="text"
+            id="email"
+            class="form-control"
+            name="email"
+            ngModel
+            required
+            emailid
+            #emailid="ngModel"
+          />
+          <span
+            id="err-email"
+            style="color: red"
+            class="small"
+            *ngIf="!emailid.valid && emailid.touched"
+            >Please enter a valid email</span
+          >
+        </div>
+      </div>
+      <div class="row mb-2">
+        <div class="form-group">
+          <label for="address">Address</label>
+          <textarea
+            type="text"
+            id="address"
+            class="form-control"
+            name="address"
+            ngModel
+            required
+            address
+            #address="ngModel"
+          ></textarea>
+          <span
+            id="err-address"
+            style="color: red"
+            class="small"
+            *ngIf="!address.valid && address.touched"
+            >Please enter a valid address</span
+          >
+        </div>
+      </div>
+      <div class="row mb-2">
+        <div class="form-group">
+          <label for="Phoneno">Mobile No:</label>
+          <input
+            type="text"
+            id="mobileno"
+            class="form-control"
+            name="mobileno"
+            ngModel
+            required
+            mobileno
+            #mobileno="ngModel"
+          />
+          <span
+            id="err-mobile"
+            style="color: red"
+            class="small"
+            *ngIf="!mobileno.valid && mobileno.touched"
+            >Please enter a valid Mobile Number</span
+          >
+        </div>
+      </div>
+      <div class="row mb-2">
+        <div class="form-group">
+          <label for="gender">Gender</label>
+          <input
+            type="text"
+            id="gender"
+            class="form-control"
+            name="gender"
+            ngModel
+            required
+            gender
+            #gender="ngModel"
+          />
+          <span
+            id="err-gender"
+            style="color: red"
+            class="small"
+            *ngIf="!gender.valid && gender.touched"
+            >Please enter a valid Gender</span
+          >
+        </div>
+      </div>
+
+      <button
+        class="btn btn-outline-danger m-2"
+        [disabled]="!f.valid"
+        (click)="onAddCitizen(f.value, f)"
+        id="register"
+      >
+        Register
+      </button>
+      <button class="btn btn-primary" routerLink="/citizenLogin">Login</button>
+    </form>
+</div>

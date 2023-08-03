@@ -1,0 +1,29 @@
+<div *ngIf="check==='none'">
+<div class="card">
+    <div class="outer">
+        <div class="details">
+            <h2>Duplicate Copy</h2>
+            <p>Do you duplicate copy of your Aadhar?</p>
+            <form #duplicate="ngForm" (ngSubmit)="duplicateCard()">
+                <div class="answer">
+                    <input type="radio" id="yes" name="choice" value="yes" [(ngModel)]="userChoice">
+                    <label for="yes">Yes</label>
+                    <input type="radio" id="no" name="choice" value="no" [(ngModel)]="userChoice">
+                    <label for="no">No</label>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+<div *ngIf="check==='true'">
+    <div class="card">
+        <h4>Your request for duplicate copy is approved.Kindly check your email</h4>
+    </div>
+</div>
+<div *ngIf="check==='false'">
+    <div class="card">
+        <h4>Your have already applied.Please wait for process time</h4>
+    </div>
+</div>

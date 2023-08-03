@@ -1,0 +1,61 @@
+<div class="container d-flex justify-content-center outer">
+  <form
+    [formGroup]="registrationForm"
+    (ngSubmit)="onSubmit()"
+    class="w-50 p-4"
+    style="color: rgb(3, 11, 51)"
+  >
+    <h4 class="text-center">Admin Login</h4>
+
+    <div class="row">
+      <div class="form-group">
+        <label for="adminName">Admin name</label>
+        <input
+          type="text"
+          id="adminName"
+          class="form-control"
+          formControlName="adminName"
+          [ngClass]="{
+            'red-border': registrationForm.get('adminName')?.invalid && registrationForm.get('adminName')?.touched
+          }"
+        />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="text"
+          id="email"
+          class="form-control"
+          formControlName="email"
+          [ngClass]="{
+            'red-border': registrationForm.get('email')?.invalid && registrationForm.get('email')?.touched
+          }"
+        />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          class="form-control"
+          formControlName="password"
+          [ngClass]="{
+            'red-border': registrationForm.get('password')?.invalid && registrationForm.get('password')?.touched
+          }"
+        />
+      </div>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-success" >Register</button>&nbsp;&nbsp;&nbsp;
+    <button class="btn btn-primary" routerLink="/adminLogin">Login</button>
+    <p class="caution" *ngIf="registrationForm.get('password')?.hasError('passwordStrength')">
+      {{ registrationForm.get("password")?.errors?.["passwordStrength"] ?? '' }}
+    </p>
+  </form>
+</div>

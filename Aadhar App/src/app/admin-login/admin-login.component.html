@@ -1,0 +1,39 @@
+<div class="container d-flex justify-content-center background">
+    <form
+      [formGroup]="loginForm"
+      (ngSubmit)="onSubmit()"
+      class="w-50 p-4"
+      style="color: rgb(17, 11, 24)"
+    >
+      <h4 class="text-center">Admin Login</h4>
+
+      <div class="row">
+        <div class="form-group">
+          <label for="email">User Name</label>
+          <br />
+          <input
+            type="text"
+            id="email"
+            class="form-control"
+            formControlName="email"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <label for="password">Password</label>
+          <br>
+          <input
+            type="password"
+            id="password"
+            class="form-control"
+            formControlName="password"
+          />
+        </div>
+      </div>
+      <br />
+      <button type="submit" class="btn btn-outline-danger">Login</button>&nbsp;&nbsp;&nbsp;
+      <button class="btn btn-dark" routerLink="/adminRegister">Register</button>
+      <p class="text-danger">{{msg}}</p>
+    </form>
+</div>

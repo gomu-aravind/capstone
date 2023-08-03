@@ -1,0 +1,40 @@
+button.btn.btn-outline-danger {
+    background-color: #dc3545;
+    color: white;
+    border: 2px solid #dc3545;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+  }
+  
+  button.btn.btn-outline-danger:hover {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  /* Apply red border to invalid, touched form controls */
+.form-control.ng-touched.ng-invalid, 
+.form-control.ng-touched:invalid {
+  border: 1px solid red;
+}
+
+.text-danger {
+  font-size: 14px;
+  color: #dc3545;
+  font-weight: bold;
+}
+
+.background {
+  margin-top: 30px;
+  background: linear-gradient(135deg, rgba(96, 224, 188, 0.6), rgb(159, 255, 135));
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+

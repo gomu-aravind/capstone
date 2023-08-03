@@ -1,0 +1,49 @@
+<div *ngIf="navRole==='admin'">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="logo"></div>
+    <a class="navbar-brand" routerLink="/adminHome">mAadhar App</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/adminHome">All Aadhar Card</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/newArrival">Approving New</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/request">Aadhaar duplication request</a>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <button class="btn btn-outline-info my-2 my-sm-0" (click)="logOut()">LogOut</button>
+    </div>
+  </nav>
+  </div>
+  <div *ngIf="navRole==='citizen'">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+      <div class="logo"></div>
+      <a class="navbar-brand" routerLink="/citizenHome">mAadhar App</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/update">Update Aadhar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/copy">Request for Duplicate</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <button class="btn btn-outline-primary my-2 my-sm-0" (click)="logOut()">LogOut</button>
+      </div>
+    </nav>
+    </div>
+    <div *ngIf="navRole===''"></div>
+<router-outlet></router-outlet>

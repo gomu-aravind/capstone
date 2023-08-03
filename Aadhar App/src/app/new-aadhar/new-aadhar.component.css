@@ -1,0 +1,63 @@
+.container{
+    padding:0;
+    display: flex;
+    margin-top:40px;
+    flex-direction: column;
+    gap:20px;
+}
+.btn-dark{
+    padding: 0;
+    border:1px solid hwb(210 47% 17%);
+}
+.btn>a{
+    color:rgb(119, 165, 211);
+    text-decoration: none;
+}
+a{
+    display: block;
+    padding:8px 12px;
+}
+.btn:hover>a{
+    color:black;
+    background-color: rgb(119, 165, 211);
+}
+th,td{
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 40px;
+}
+.first{
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(35%);
+    height:200px;
+}
+.form-control{
+    width:25%;
+}
+
+.emblem{
+    background-image: url("/assets/img/emblem.jpg");
+    background-size: cover;
+    background-position: center;
+    width:100px;
+    height:153px;
+}
+.flag{
+    background-image: url("/assets/img/indian-flag.jpg");
+    background-size: cover;
+    background-position: center;
+    width:100px;
+    height:115px;
+} 
+
+
+
+.table{
+    margin-bottom: 0;
+    background: linear-gradient(to right, rgb(172, 182, 229), rgb(134, 253, 232));
+}
+td{
+    background-color: azure;
+}

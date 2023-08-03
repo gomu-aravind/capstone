@@ -1,0 +1,24 @@
+<div class="background">
+<div *ngIf="isGiven()">
+    <div class="card">
+        <div class="outer">
+            <img src="assets/img/worker.png" alt="Photo">
+            <div class="details">
+                <h2>{{ citizen.name }}</h2>
+                <p>Email: {{ citizen.email }}</p>
+                <p>Phone: {{ citizen.mobileno }}</p>
+                <p>Gender: {{ citizen.gender }}</p>
+                <p>Address: {{ citizen.address }}</p>
+            </div>
+        </div>
+        <div>
+            <h5 style="text-align: center;">Your UID is</h5>
+            <h6>{{citizen.uid}}</h6>
+        </div>
+    </div>
+    <h5 style="text-align: center;">Issued on {{citizen.issueDate}}</h5>
+</div>
+<div style="text-align: center; margin-top: 30px;transform: translateY(-120%);">
+    <h5>{{ msg }}</h5>
+</div>
+</div>
